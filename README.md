@@ -1,4 +1,4 @@
-# Nvim
+<h1 align="center"> Nvim </h1>
 
 My personal nvim config using [kickstart](https://github.com/nvim-lua/kickstart.nvim/tree/master) as starting point
 
