@@ -4,9 +4,8 @@ My personal nvim config using [kickstart](https://github.com/nvim-lua/kickstart.
 
 ## Installation
 
-### Install Dependencies
+### Dependencies
 
-External Requirements:
 - Basic utils: `git`, `make`, `unzip`, C Compiler (`gcc`)
 - [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
 - [fd-find](https://github.com/sharkdp/fd#installation)
