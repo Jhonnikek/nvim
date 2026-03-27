@@ -70,3 +70,5 @@ vim.diagnostic.config {
 }
 
 vim.opt.termguicolors = true
+
+vim.opt.laststatus = 3
