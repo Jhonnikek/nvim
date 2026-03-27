@@ -10,11 +10,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
   callback = function() vim.hl.on_yank() end,
 })
-
-vim.api.nvim_create_autocmd('LspAttach', {
-  group = vim.api.nvim_create_augroup('EnableInlayHints', { clear = true }),
-  callback = function(event)
-    local client = vim.lsp.get_client_by_id(event.data.client_id)
-    if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then vim.lsp.inlay_hint.enable(true, { bufnr = event.buf }) end
-  end,
-})
