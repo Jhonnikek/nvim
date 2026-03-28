@@ -37,6 +37,17 @@ return {
         inc_rename = false,
         lsp_doc_border = false,
       },
+      views = {
+        cmdline_popup = {
+          border = { style = 'single' },
+        },
+        popup = {
+          border = { style = 'single' },
+        },
+        hover = {
+          border = { style = 'single' },
+        },
+      },
     },
   },
 }
