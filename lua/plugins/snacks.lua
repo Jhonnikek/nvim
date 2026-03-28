@@ -3,14 +3,6 @@ return {
     'folke/snacks.nvim',
     priority = 1000,
     lazy = false,
-    init = function()
-      vim.api.nvim_create_autocmd('User', {
-        pattern = 'OilActionsPost',
-        callback = function(event)
-          if event.data.actions.type == 'move' then Snacks.rename.on_rename_file(event.data.actions.src_url, event.data.actions.dest_url) end
-        end,
-      })
-    end,
     opts = {
       bigfile = { enabled = true },
       explorer = { enabled = true, hidden = true },
@@ -51,9 +43,20 @@ return {
           { section = 'startup' },
         },
       },
-      zen = {
-        enabled = true,
-        toggles = { ufo = true, dim = true, signcolumn = 'no' },
+      styles = {
+        input = {
+          relative = 'cursor',
+          border = 'single',
+        },
+        notification = {
+          border = 'single',
+        },
+        terminal = {
+          border = 'single',
+          backdrop = false,
+          width = 0.9,
+          height = 0.9,
+        },
       },
     },
     keys = {
@@ -62,6 +65,8 @@ return {
       { '<leader>bo', function() Snacks.bufdelete.other() end, desc = 'Buffer Delete Other', mode = 'n' },
       { '<leader>bz', function() Snacks.zen() end, desc = 'Toggle Zen Mode', mode = 'n' },
       { '<leader>e', function() Snacks.explorer() end, desc = 'Explorer' },
+      { '<leader>ld', function() Snacks.terminal 'lazydocker' end, desc = 'LazyDocker' },
+      { '<leader>gg', function() Snacks.lazygit() end, desc = 'LazyGit' },
       { '<leader>sf', function() Snacks.picker.files() end, desc = 'Find Files' },
       { '<leader>sg', function() Snacks.picker.grep() end, desc = 'Live Grep' },
       { '<leader>s.', function() Snacks.picker.recent() end, desc = 'Recent Files' },
