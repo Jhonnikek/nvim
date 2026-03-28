@@ -10,8 +10,12 @@ return {
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
         { 'gr', group = 'LSP Actions', mode = { 'n' } },
-        { '<leader>l', group = 'Lazy', mode = { 'n' } },
+        { '<leader>l', group = 'Lazydocker', mode = { 'n' } },
         { '<leader>q', group = 'Session', mode = { 'n' } },
+        { '<leader>g', group = 'Lazygit', mode = { 'n' } },
+      },
+      win = {
+        border = 'single',
       },
     },
   },
