@@ -61,6 +61,10 @@ return {
         ty = {},
         stylua = {},
 
+        emmet_language_server = {
+          filetypes = { 'css', 'eruby', 'html', 'javascript', 'javascriptreact', 'less', 'sass', 'scss', 'pug', 'typescriptreact' },
+        },
+
         lua_ls = {
           on_init = function(client)
             if client.workspace_folders then
