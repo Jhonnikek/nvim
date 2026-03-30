@@ -16,6 +16,9 @@ return {
         local search = MiniStatusline.section_searchcount { trunc_width = 75 }
         local location = '%2l:%-2v'
 
+        local ft = vim.bo.filetype
+        if ft:match '^snacks_' then filename = '' end
+
         return MiniStatusline.combine_groups {
           { hl = mode_hl, strings = { mode } },
           { hl = 'MiniStatuslineDevinfo', strings = { git, diff } },
