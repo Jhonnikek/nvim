@@ -4,7 +4,6 @@ return {
     event = 'VeryLazy',
     dependencies = {
       'MunifTanjim/nui.nvim',
-      'folke/snacks.nvim',
     },
     opts = {
       lsp = {
@@ -13,9 +12,7 @@ return {
           ['vim.lsp.util.stylize_markdown'] = true,
           ['cmp.entry.get_documentation'] = true,
         },
-        progress = {
-          enabled = false,
-        },
+        progress = { enabled = false },
       },
       routes = {
         {
