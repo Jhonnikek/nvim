@@ -1,6 +1,6 @@
 return {
   'saghen/blink.cmp',
-  event = 'InsertEnter',
+  event = { 'InsertEnter', 'CmdlineEnter' },
   version = '1.*',
   dependencies = {
     {
@@ -34,5 +34,14 @@ return {
     snippets = { preset = 'luasnip' },
     fuzzy = { implementation = 'lua' },
     signature = { enabled = true },
+
+    cmdline = {
+      enabled = true,
+      completion = {
+        menu = {
+          auto_show = true,
+        },
+      },
+    },
   },
 }
