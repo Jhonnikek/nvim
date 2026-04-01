@@ -58,11 +58,33 @@ return {
       ---@type table<string, vim.lsp.Config>
       local servers = {
         ruff = {},
+
         ty = {},
+
         stylua = {},
 
+        intelephense = {},
+
+        html = {
+          filetypes = { 'html', 'twig', 'hbs', 'php', 'htmldjango', 'jinja' },
+        },
+
         emmet_language_server = {
-          filetypes = { 'css', 'eruby', 'html', 'javascript', 'javascriptreact', 'less', 'sass', 'scss', 'pug', 'typescriptreact' },
+          filetypes = {
+            'css',
+            'eruby',
+            'html',
+            'javascript',
+            'javascriptreact',
+            'less',
+            'sass',
+            'scss',
+            'pug',
+            'typescriptreact',
+            'php',
+            'htmldjango',
+            'jinja',
+          },
         },
 
         lua_ls = {
