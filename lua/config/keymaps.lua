@@ -11,10 +11,15 @@ map('n', '<C-Right>', '<C-w>l', { desc = 'Move Focus to Right Window' })
 map('n', '<S-Left>', '<cmd>bprevious<cr>', { desc = 'Prev Buffer' })
 map('n', '<S-Right>', '<cmd>bnext<cr>', { desc = 'Next Buffer' })
 
-map({ 'n', 'v' }, 'd', [["_d]], { desc = 'Delete Selection' })
+map({ 'n', 'v' }, 'd', '"_d', { desc = 'Delete Selection' })
+
+map({ 'n' }, 'xx', 'dd', { remap = false, desc = 'Cut a line' })
 
 map('v', '"', 'c"<C-r>""<Esc>', { desc = 'Surround With Double Quotes' })
 map('v', "'", "c'<C-r>\"'<Esc>", { desc = 'Surround With Single Quotes' })
+map('v', '(', 'c(<C-r>")<Esc>', { desc = 'Surround With Parentheses' })
+map('v', '[', 'c[<C-r>"]<Esc>', { desc = 'Surround With Brackets' })
+map('v', '{', 'c{<C-r>"}<Esc>', { desc = 'Surround With Braces' })
 
 map('n', '<leader>qq', '<cmd>qa<cr>', { desc = 'Quit All' })
 map('n', '<leader>qw', '<cmd>xa<cr>', { desc = 'Write all and Quit' })
