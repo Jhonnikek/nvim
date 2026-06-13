@@ -87,6 +87,18 @@ return {
           },
         },
 
+        dockerls = {},
+        docker_compose_language_service = {},
+
+        yamlls = {
+          settings = {
+            yaml = {
+              format = { enable = true },
+              customTags = { '!reference sequence', '!vault scalar', '!Ref', '!Sub' },
+            },
+          },
+        },
+
         lua_ls = {
           on_init = function(client)
             if client.workspace_folders then

@@ -10,12 +10,11 @@ My personal nvim config using [kickstart](https://github.com/nvim-lua/kickstart.
 - [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
 - [fd-find](https://github.com/sharkdp/fd#installation)
 - [tree-sitter-cli](https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md#installation)
-- [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli)
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
 - [Nerd Font](https://www.nerdfonts.com/)
 
 ```bash
-sudo pacman -S --noconfirm --needed gcc make git ripgrep fd tree-sitter-cli unzip neovim markdownlint-cli wl-clipboard
+sudo pacman -S --noconfirm --needed gcc make git ripgrep fd tree-sitter-cli unzip neovim wl-clipboard
 ```
 
 ### Clone repo
